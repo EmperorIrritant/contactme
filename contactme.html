@@ -1,5 +1,59 @@
 <html>
     <head>
+        <script>
+            function submitToAPI(e) {
+                e.preventDefault();
+
+                var Namere = /[A-Za-z]{1}[A-Za-z]/;
+                if (!Namere.test($("#name-input").val())) {
+                            alert ("Name cannot be less than 2 chararacters");
+                    return;
+                }
+                var mobilere = /[0-9]{10}/;
+                if (!mobilere.test($("#phone-input").val())) {
+                    alert ("Please enter valid mobile number");
+                    return;
+                }
+                if ($("#email-input").val()=="") {
+                    alert ("Please enter your email id");
+                    return;
+                }
+                var reemail = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+                if (!reemail.test($("#email-input").val())) {
+                    alert ("Please enter valid email address");
+                    return;
+                }
+
+                var name = $("#name-input").val();
+                var phone = $("#phone-input").val();
+                var email = $("#email-input").val();
+                var desc = $("#description-input").val();
+                var data = {
+                    name : name,
+                    phone : phone,
+                    email : email,
+                    desc : desc
+                    };
+
+                $.ajax({
+                    type: "POST",
+                    url : "",
+                    dataType: "json",
+                    crossDomain: "true",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(data),
+
+                    
+                    success: function () {
+                        alert("Successful");
+                        document.getElementById("contact-form").reset();
+                        location.reload();
+                    },
+                    error: function () {
+                        alert("UnSuccessful");
+                    }});
+                }
+        </script>
     </head>
     <body>
         <div style="width: 42%; padding-left: 30%; padding-top: 5%;">
