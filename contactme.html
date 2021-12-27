@@ -156,7 +156,9 @@
                 <input type="email" style="height:35px;" id="email-input" placeholder="I mean, I need a way to reply. But if you don't want my reply, don't mention it. Still, a bunch of email addresses and temporary mails can be useful." class="form-control" style="width:100%;"/><br/>
                 <h4 class="text-dark font-weight-bold">Your message for me</h4>
                 <textarea id="description-input" rows="3" placeholder="Take your spammer bots and fingers, scanner bots and fingers, trolling fingers (do we have trolling bots, yet?) and aim them elsewhere. Please?" class="form-control" style="width:100%;"></textarea><br/>
-                <center><button type="button" onClick="submitToSQS(event)" class="btn btn-lg btn-danger btn-gradient" style="margin-top: 2%;">Submit</button></center>
+                <div class="text-center p-4">
+                    <button type="button" onClick="submitToSQS(event)" class="btn btn-lg btn-danger btn-gradient">Submit</button>
+                </div>
             </form>
         </div>
         <footer class="text-center text-lg-start bg-light text-muted">
