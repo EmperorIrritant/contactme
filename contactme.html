@@ -2,6 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="untracked/aws-sdk-2.1048.0.min.js"></script>
         <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -10,7 +11,7 @@
             .contact-frame {
                 width: 80%;
                 height: 80%;
-                padding: 3% 5%;
+                padding: 2% 5%;
                 margin: 5% 10%;
             }
             .title-primary {
@@ -141,7 +142,7 @@
     <body class="bg-dark bg-gradient">
         <div class="contact-frame bg-white bg-gradient">
             <center>
-                <div style="padding-bottom: 2%;">
+                <div style="padding-bottom: 3%;">
                     <div class="title-primary">Contact</div>
                     <div class="title-secondary">Emperor Irritant, the Oddly Successful</div>
                 </div>
@@ -155,7 +156,7 @@
                 <input type="email" style="height:35px;" id="email-input" placeholder="Enter email here" class="form-control" style="width:100%;"/><br/>
                 <h4 class="text-dark font-weight-bold">Your message for me:</h4>
                 <textarea id="description-input" rows="3" placeholder="Enter your message…" class="form-control" style="width:100%;"></textarea><br/>
-                <center><button type="button" onClick="submitToSQS(event)" class="btn btn-lg btn-danger btn-gradient">Submit</button></center>
+                <center><button type="button" onClick="submitToSQS(event)" class="btn btn-lg btn-danger btn-gradient" style="margin-top: 2%;">Submit</button></center>
             </form>
         </div>
     </body>
