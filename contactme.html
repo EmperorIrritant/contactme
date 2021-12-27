@@ -10,9 +10,9 @@
         <style type="text/css">
             .contact-frame {
                 width: 80%;
-                height: 80%;
+                height: 86%;
                 padding: 2% 5%;
-                margin: 5% 10%;
+                margin: 3% 10%;
             }
             .title-primary {
                 font-size: 225%;
@@ -148,15 +148,15 @@
                 </div>
             </center>
             <form id="contact-form" method="post">
-                <h4 class="text-dark font-weight-bold">Name:</h4>
+                <h4 class="text-dark font-weight-bold">Name</h4><h6 class="text-muted">Feel free to make up your name</h6>
                 <input type="text" style="height:35px;" id="name-input" placeholder="Enter name here" class="form-control" style="width:100%;" /><br/>
-                <h4 class="text-dark font-weight-bold">Phone:</h4>
+                <h4 class="text-dark font-weight-bold">Phone</h4><h6 class="text-muted">You don't really want to give me your number, do you?</h6>
                 <input type="phone" style="height:35px;" id="phone-input" placeholder="Enter phone number" class="form-control" style="width:100%;"/><br/>
-                <h4 class="text-dark font-weight-bold">Email:</h4>
+                <h4 class="text-dark font-weight-bold">Email</h4><h6 class="text-muted">I mean, I need a way to reply, if reply is needed</h6>
                 <input type="email" style="height:35px;" id="email-input" placeholder="Enter email here" class="form-control" style="width:100%;"/><br/>
-                <h4 class="text-dark font-weight-bold">Your message for me:</h4>
+                <h4 class="text-dark font-weight-bold">Your message for me</h4><h6 class="text-muted">Take your spammer bots and fingers, scanner bots and fingers, trolling fingers (do we have trolling bots, yet?) and aim them elsewhere. Please?</h6>
                 <textarea id="description-input" rows="3" placeholder="Enter your message…" class="form-control" style="width:100%;"></textarea><br/>
-                <center><button type="button" onClick="submitToSQS(event)" class="btn btn-lg btn-danger btn-gradient" style="margin-top: 2%;">Submit</button></center>
+                <center><button type="button" onClick="submitToSQS(event)" class="btn btn-lg btn-danger btn-gradient">Submit</button></center>  
             </form>
         </div>
     </body>
