@@ -22,13 +22,13 @@
         </style>
         <script>
             AWS.config.update({region: 'us-east-1'});
-            AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: '***REMOVED***'});
+            AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: ''});
             if (AWS.config.credentials.expired == true) {
                 AWS.config.credentials.get();
             }
             var SQS = new AWS.SQS({region: 'us-east-1', apiVersion: '2012-11-05'});
 
-            let publickeypem = `***REMOVED***`;
+            let publickeypem = ``;
 
             function base64ToArrayBuffer(b64) {
                 var byteString = window.atob(b64);
@@ -81,7 +81,7 @@
                 var sendtext = btoa(String.fromCharCode.apply(null, new Uint8Array(ciphertext)));
                 var params = {
                     MessageBody: sendtext,
-                    QueueUrl: '***REMOVED***',
+                    QueueUrl: '',
                     DelaySeconds: 0,
                 };
                 SQS.sendMessage(params, function(err, data) {
