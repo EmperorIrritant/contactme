@@ -20,7 +20,7 @@
                 resize: none;
             }
         </style>
-        <script>
+        <script id="config">
             AWS.config.update({region: 'us-east-1'});
             AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: ''});
             if (AWS.config.credentials.expired == true) {
